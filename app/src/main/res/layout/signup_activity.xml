@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_white"
+        tools:context=".SignupActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="295dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/logom4"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="@+id/imageViewD"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewD"
+                app:layout_constraintStart_toStartOf="@+id/imageViewD"
+                app:layout_constraintEnd_toEndOf="@+id/imageViewD"
+                android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/imageViewD"
+            android:layout_width="248dp"
+            android:layout_height="184dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ilustrasi_signup"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="50dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="50dp" />
+
+        <EditText
+                android:id="@+id/nama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/nama"
+                android:background="@drawable/et_bg"
+                android:padding="16dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline_right"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewD"
+                android:inputType="text"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+        <EditText
+                android:id="@+id/nomorhandphone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:hint="@string/nomor_hp"
+                android:padding="16dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline_right"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/nama"
+                android:inputType="phone"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+
+        <EditText
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:hint="@string/email"
+                android:padding="16dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline_right"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/nomorhandphone"
+                android:inputType="textEmailAddress"
+                android:importantForAutofill="no" tools:targetApi="o"/>
+
+        <TextView
+                android:id="@+id/tgl_lahir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:hint="@string/tanggal_lahir"
+                android:padding="16dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline_right"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/guideline_left"
+                app:layout_constraintTop_toBottomOf="@+id/email"
+                android:importantForAutofill="no"
+                tools:targetApi="o"/>
+        <Button
+                android:text="@string/mendaftar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" android:id="@+id/signupbutton"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tgl_lahir"
+                app:layout_constraintStart_toStartOf="@+id/guideline_left"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+                android:background="@drawable/button_custom" android:textColor="@color/bg_white"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/sudah_punya_akun"
+                  android:layout_marginTop="20dp"
+                  app:layout_constraintTop_toBottomOf="@+id/signupbutton"
+                  app:layout_constraintStart_toStartOf="@+id/guideline_left" android:layout_marginLeft="8dp"
+                  android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/loginbutton"
+                  android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                  app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="8dp"
+                  app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+        <Button
+                android:text="@string/login"
+                android:layout_width="55dp"
+                android:layout_height="23dp" android:id="@+id/loginbutton"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/signupbutton"
+                android:textColor="@color/bg_white"
+                android:background="@drawable/button_custom" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp" tools:layout_editor_absoluteX="288dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+                app:layout_constraintVertical_bias="1.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
